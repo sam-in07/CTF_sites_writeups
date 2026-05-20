@@ -18,3 +18,17 @@ Converting these binary bytes to hexadecimal gives:
 FF D8 FF E0
 
 
+python code to convert :
+PicoCtf/Forensics/Codefiles/Binarydigt.py  
+
+┌──(samin㉿kali)-[~/…/Crf_sites_writeups/PicoCtf/Forensics/Codefiles]
+└─$ python3 Binarydigt.py
+
+┌──(samin㉿kali)-[~/Downloads/Picofiles]
+└─$ xdg-open recovered.jpg
+
+
+Flag Image :
+PicoCtf/Forensics/images/recovered.jpg  
+
+Flag : **picoCTF{h1dd3n_1n_th3_b1n4ry_8e65b559} **
