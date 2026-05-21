@@ -1,6 +1,8 @@
 Link :  https://learn.cylabacademy.org/library/61
 
 Catagory : hard 
+
+
 Soln :
 
 ┌──(samin㉿kali)-[~]
@@ -46,6 +48,13 @@ IS THIS POSSIBLE and FEASIBLE? (Y/N):N
 Outstanding move!!!
 
 ```
+   ** n in the challenge is larger than 2048 bits long (very large), meaning it’s part of modern cryptographic standards.
+    Factoring a 2048-bit number is not feasible using classical methods or widely available computational power due to its extreme difficulty. This is the foundation of RSA’s security.
+    Is it possible? Theoretically, yes, but: factoring for well-generated RSA keys of this size is infeasible for classical computers. It might take billions of years with current technology.
+
+   **
+
+
 
 ```python
 #### NEW PROBLEM ####      #problem 4
@@ -94,6 +103,19 @@ Outstanding move!!!
 
 ```
 
+    Explanation:
+
+This problem involves decrypting the RSA ciphertext back to plaintext. To decrypt, we need d. Calculating d requires:
+
+    Factoring n into p and q.
+    Computing: ϕ(n) = (p − 1)(q − 1)
+    Finding d, the modular inverse of e modulo ϕ(n).
+
+As we said before, geting p and q from n is computationally prohibitive (it would take to long to compute due to the fact that n is larger than 2048.
+
+
+
+
 ```python
 
 #### NEW PROBLEM ####    #problem 7
@@ -102,8 +124,29 @@ p : 9784677531239280103722439697701261584843319964010578611975704709875799827300
 e : 65537
 ##### PRODUCE THE FOLLOWING ####
 d
-IS THIS POSSIBLE and FEASIBLE? (Y/N):
+IS THIS POSSIBLE and FEASIBLE? (Y/N):Y
+#### TIME TO SHOW ME WHAT YOU GOT! ###
+d: 1405046269503207469140791548403639533127416416214210694972085079171787580463776820425965898174272870486015739516125786182821637006600742140682552321645503743280670839819078749092730110549881891271317396450158021688253989767145578723458252769465545504142139663476747479225923933192421405464414574786272963741656223941750084051228611576708609346787101088759062724389874160693008783334605903142528824559223515203978707969795087506678894006628296743079886244349469131831225757926844843554897638786146036869572653204735650843186722732736888918789379054050122205253165705085538743651258400390580971043144644984654914856729
+Outstanding move!!!
 
 
 
 ```
+┌──(samin㉿kali)-[~/…/Crf_sites_writeups/PicoCtf/Cryptography/codes]
+└─$ python3 rsa_code7.py  
+Private key (d): 1405046269503207469140791548403639533127416416214210694972085079171787580463776820425965898174272870486015739516125786182821637006600742140682552321645503743280670839819078749092730110549881891271317396450158021688253989767145578723458252769465545504142139663476747479225923933192421405464414574786272963741656223941750084051228611576708609346787101088759062724389874160693008783334605903142528824559223515203978707969795087506678894006628296743079886244349469131831225757926844843554897638786146036869572653204735650843186722732736888918789379054050122205253165705085538743651258400390580971043144644984654914856729
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                  ┌──(samin㉿kali)-[~/…/Crf_sites_writeups/PicoCtf/Cryptography/codes]
+└─$ python3 rsa_code8.py
+Plaintext: 14311663942709674867122208214901970650496788151239520971623411712977120527163003942343369341
+
