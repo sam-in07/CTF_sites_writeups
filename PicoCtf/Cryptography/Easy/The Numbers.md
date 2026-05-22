@@ -9,4 +9,4 @@ then copy this image numbers : 16 9 3 15 3 20 6 { 20 8 5 14 21 13 2 5 18 19 13 1
 
 Flag : 	PICOCT FTHEN UMBERS MASON
 
-**	PICOCTF{THENUMBERSMASON}**
+**	PICOCTF{THENUMBERSMASON}**   
