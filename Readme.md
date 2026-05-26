@@ -23,3 +23,7 @@ https://rot13.com/
 https://www.dcode.fr/caesar-cipher 
 
 https://www.base64decode.org/ 
+
+https://morsecode.world/international/decoder/audio-decoder-expert.html
+
+https://www.dcode.fr/monoalphabetic-substitution 
