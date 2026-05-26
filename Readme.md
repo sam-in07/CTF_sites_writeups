@@ -20,4 +20,6 @@ https://www.dcode.fr/rsa-cipher
 https://rot13.com/  
 
 
-https://www.dcode.fr/caesar-cipher
+https://www.dcode.fr/caesar-cipher 
+
+https://www.base64decode.org/ 
