@@ -1,3 +1,7 @@
+Resouces :
+https://cryptocat.me/resources 
+
+
 Writeups bests:
 https://ctf.samsongama.com/ctf/index.html
 
@@ -12,7 +16,7 @@ ToOLS :
 
 CRYPTO : 
 
-https://www.dcode.fr/vigenere-cipher  
+**https://www.dcode.fr/vigenere-cipher  
 https://www.guballa.de/vigenere-solver 
 https://www.boxentriq.com/ciphers/one-time-pad  
 
@@ -30,6 +34,18 @@ https://www.base64decode.org/
 https://morsecode.world/international/decoder/audio-decoder-expert.html
 
 https://www.dcode.fr/monoalphabetic-substitution 
+**
+
+
+Binary Exploitation :
+
+Resources : https://github.com/Crypto-Cat/CTF/tree/main/pwn/binary_exploitation_101 
+
+TOOLS : 
+
+
+
+
 
 
 
