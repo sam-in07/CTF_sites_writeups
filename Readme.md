@@ -47,5 +47,18 @@ TOOLS :
 
 
 
+WEB exploit : 
+
+
+https://github.com/juice-shop/juice-shop    
+
+For CTF : https://owasp.org/www-project-juice-shop/ 
+
+https://pwning.owasp-juice.shop/companion-guide/latest/    
+
+http://localhost:3000/#/score-board
+
+
+
 
 
