@@ -1,5 +1,7 @@
 Resouces :
 https://cryptocat.me/resources 
+https://ctf-wiki.mahaloz.re/introduction/mode/ 
+
 
 
 Writeups bests:
@@ -60,5 +62,7 @@ http://localhost:3000/#/score-board
 
 
 
-
+TOOLS 
+alt of burp 
+https://www.kali.org/tools/zaproxy/ 
 
