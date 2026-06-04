@@ -3,8 +3,7 @@ Link : https://learn.cylabacademy.org/library/472
 
 Lyrics jump from verses to the refrain kind of like a subroutine call. There's a hidden refrain this program doesn't print by default. Can you get it to print it? There might be something in it for you.
 
-The program's source code can be downloaded here (PicoCtf/Reverse_eng/Files/lyric-reader.py)
-.
+The program's source code can be [downloaded here ](https://github.com/sam-in07/CTF_sites_writeups/blob/3ed8bee1b77342a55f40fb422c0a0f5aa627acc7/PicoCtf/Reverse_eng/EASY/Files/lyric-reader.py)
 
 
 

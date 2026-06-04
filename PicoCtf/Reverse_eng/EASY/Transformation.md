@@ -3,7 +3,7 @@ Link : https://learn.cylabacademy.org/library/104
 
 I wonder what this really is...
 
-enc (PicoCtf/Reverse_eng/Files/enc)
+[enc](https://github.com/sam-in07/CTF_sites_writeups/blob/3ed8bee1b77342a55f40fb422c0a0f5aa627acc7/PicoCtf/Reverse_eng/EASY/Files/enc)
 ''.join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])
 
 
