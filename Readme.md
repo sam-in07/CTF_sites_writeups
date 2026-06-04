@@ -1,3 +1,10 @@
+| Language | Run command                   |
+| -------- | ----------------------------- |
+| Python   | `python3 xyz.py`              |
+| C++      | `g++ xyz.cpp -o xyz && ./xyz` |
+
+
+
 Resouces :
 https://cryptocat.me/resources 
 https://ctf-wiki.mahaloz.re/introduction/mode/ 
