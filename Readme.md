@@ -43,6 +43,9 @@ https://www.base64decode.org/
 https://morsecode.world/international/decoder/audio-decoder-expert.html
 
 https://www.dcode.fr/monoalphabetic-substitution 
+
+https://gchq.github.io/CyberChef/ 
+
 **
 
 
