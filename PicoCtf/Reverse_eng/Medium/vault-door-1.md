@@ -1,13 +1,13 @@
 Link : https://learn.cylabacademy.org/library/12
 
 
-This vault uses some complicated arrays! I hope you can make sense of it, special agent. The source code for this vault is here: VaultDoor1.java   (PicoCtf/Reverse_eng/Medium/Files/VaultDoor1.java)
+This vault uses some complicated arrays! I hope you can make sense of it, special agent. The source code for this vault is here: [VaultDoor1.java  ](https://github.com/sam-in07/CTF_sites_writeups/blob/5a02401f83b93f53b8562d23b6f6a61d4b9dd62f/PicoCtf/Reverse_eng/Medium/Files/VaultDoor1.java) 
 
 
 
 Soln : 
 
-Convert java to code to Py then (PicoCtf/Reverse_eng/Medium/Files/VaultDoor1.py)
+Convert java to code to Py then [(PicoCtf/Reverse_eng/Medium/Files/VaultDoor1.py)](https://github.com/sam-in07/CTF_sites_writeups/blob/5a02401f83b93f53b8562d23b6f6a61d4b9dd62f/PicoCtf/Reverse_eng/Medium/Files/VaultDoor1.py)
 
  return (len(password) == 32 and
             password[0]  == 'd' and
@@ -24,7 +24,7 @@ Convert java to code to Py then (PicoCtf/Reverse_eng/Medium/Files/VaultDoor1.py)
 
             then write pyhton scripts for print this words 
 
-PicoCtf/Reverse_eng/Medium/codefiles/vaudoosol.py
+[PicoCtf/Reverse_eng/Medium/codefiles/vaudoosol.py](https://github.com/sam-in07/CTF_sites_writeups/blob/5a02401f83b93f53b8562d23b6f6a61d4b9dd62f/PicoCtf/Reverse_eng/Medium/codefiles/vaudoosol.py)
 
 Run this code and found  flag 
 
