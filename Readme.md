@@ -52,6 +52,7 @@ Resources : https://github.com/Crypto-Cat/CTF/tree/main/pwn/binary_exploitation_
 
 TOOLS : 
 
+https://www.kali.org/tools/ghidra/ 
 
 
 
