@@ -10,7 +10,7 @@ alphabet = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ \
 
 
 def decode_secret(secret):
-    """ROT47 decode
+    """
 
     NOTE: encode and decode are the same operation in the ROT cipher family.
     """
