@@ -3,6 +3,12 @@
 | Python   | `python3 xyz.py`              |
 | C++      | `g++ xyz.cpp -o xyz && ./xyz` |
 
+gcc xyz.c
+
+cutter cmd :
+
+cutter "/home/samin/Documents/Tryhackme/pwn101-1644307211706.pwn101"  
+
 
 
 Resouces :
@@ -76,4 +82,26 @@ http://localhost:3000/#/score-board
 TOOLS 
 alt of burp 
 https://www.kali.org/tools/zaproxy/ 
+
+
+
+Reverse eng :
+
+https://github.com/0xMr-Robot/CTF-Reverse-Engineering-Bootcamp
+
+
+
+
+
+
+PWN :
+
+https://razvioverflow.github.io/tryhackme/pwn101
+
+Tools : 
+
+https://www.kali.org/tools/rizin-cutter/ 
+
+
+
 
