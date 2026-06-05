@@ -7,24 +7,42 @@ Download the program here(PicoCtf/Reverse_eng/Medium/file-run2.md)
 
 Soln : 
 
+
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
 └─$ chmod +x run2
+
                                                                                                                                    
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
 └─$ ./run2 hellw  
 Won't you say 'Hello!' to me first?
-                                                                                                                                   
+
+
+
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
 └─$ ./run Hello!       
-The flag is: picoCTF{U51N6_Y0Ur_F1r57_F113_e5559d46}                                                                                                                                   
+The flag is: picoCTF{U51N6_Y0Ur_F1r57_F113_e5559d46}
+
+
+
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
 └─$  
 
+
 OR : 
+
+
+
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
 └─$  ./run Hello! | cut -d " " -f4
 picoCTF{U51N6_Y0Ur_F1r57_F113_e5559d46}
 
+
+
+
+
+
+
+==============================================================
 
 Step 1: strcmp(*(char **)(param_2 + 8), "Hello!")
 param_2: This is presumably a pointer to some structure or array in memory.
