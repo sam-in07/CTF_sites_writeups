@@ -7,34 +7,23 @@ Download the program here(PicoCtf/Reverse_eng/Medium/file-run2.md)
 
 Soln : 
 
-
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
-└─$ chmod +x run2
-
+└─$ chmod +x run2             
                                                                                                                                    
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
 └─$ ./run2 hellw  
 Won't you say 'Hello!' to me first?
+                                                                                                                                   
+┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
+└─$ ./run2 Hello!    
+The flag is: **pico{F1r57_4rgum3n7_f65ed63e}     **                                                                                                
 
 
 
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
-└─$ ./run Hello!       
-The flag is: picoCTF{U51N6_Y0Ur_F1r57_F113_e5559d46}
+└─$ ./run2 Hello! | cut -d " " -f4
 
-
-
-┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
-└─$  
-
-
-OR : 
-
-
-
-┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
-└─$  ./run Hello! | cut -d " " -f4
-picoCTF{U51N6_Y0Ur_F1r57_F113_e5559d46}
+**picoCTF{F1r57_4rgum3n7_f65ed63e}**
 
 
 

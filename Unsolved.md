@@ -8,6 +8,5 @@ PicoCtf/WEB EXPLOIT /EASY/SSTI1.md
 
 Reverse :
 
-PicoCtf/Reverse_eng/Medium/file-run2.md  : Gives error 
 
 
