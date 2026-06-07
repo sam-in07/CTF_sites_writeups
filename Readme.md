@@ -31,7 +31,8 @@ ToOLS :
 
 CRYPTO : 
 
-**https://www.dcode.fr/vigenere-cipher  
+**
+https://www.dcode.fr/vigenere-cipher  
 https://www.guballa.de/vigenere-solver 
 https://www.boxentriq.com/ciphers/one-time-pad  
 
@@ -54,6 +55,9 @@ https://morsecode.world/international/decoder/audio-decoder-expert.html
 https://www.dcode.fr/monoalphabetic-substitution 
 
 https://gchq.github.io/CyberChef/ 
+
+https://gchq.github.io/CyberChef/#recipe=From_Hex
+
 
 **
 
