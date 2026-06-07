@@ -41,10 +41,13 @@ https://www.dcode.fr/rsa-cipher
 
 https://rot13.com/  
 
+https://www.tunnelsup.com/hash-analyzer/
 
 https://www.dcode.fr/caesar-cipher 
 
 https://www.base64decode.org/ 
+
+https://crackstation.net/        Crack Station Tool to crack the hash code into a normal text.     
 
 https://morsecode.world/international/decoder/audio-decoder-expert.html
 
