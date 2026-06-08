@@ -10,3 +10,8 @@ Reverse :
 
 
 
+Cypto :
+PicoCtf/Cryptography/Medium/substitution2.md
+PicoCtf/Cryptography/Medium/Easy Peasy.md
+
+

@@ -1,13 +1,15 @@
 Problem : Problem : https://learn.cylabacademy.org/library/380
+A second message has come in the mail, and it seems almost identical to the first one. Maybe the same thing will work again.
 
-File :
-PicoCtf/Cryptography/Medium/files/substitution0/message.txt
+Download the message here (PicoCtf/Cryptography/Medium/files/substitution1)
+
+
+
 
 
 Soln : 
 https://www.dcode.fr/monoalphabetic-substitution go there paste txt 
+Click on :  Manual decryption (empty visual tool)
 
-PICOCTF{FR3ZU3NCY_4774CK5_4R3_C001_6E0659FB}
-picoCTF{FR3QU3NCY_4774CK5_4R3_C001_7AA384BC}
 
-Status : ERROR 
+PICOCTF{FR3QU3NCY_4774CK5_4R3_C001_6E0659FB}

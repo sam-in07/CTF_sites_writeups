@@ -36,9 +36,9 @@ https://www.boxentriq.com/ciphers/keyed-caesar-cipher
 https://www.dcode.fr/vigenere-cipher  
 https://www.guballa.de/vigenere-solver 
 https://www.boxentriq.com/ciphers/one-time-pad  
-
+https://www.dcode.fr/rail-fence-cipher
 https://www.unit-conversion.info/texttools/morse-code/
-
+https://www.dcode.fr/atbash-cipher 
 https://www.dcode.fr/rsa-cipher   
 
 https://rot13.com/  
