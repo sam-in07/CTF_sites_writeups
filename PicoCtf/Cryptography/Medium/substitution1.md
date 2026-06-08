@@ -1,7 +1,7 @@
 Problem : Problem : https://learn.cylabacademy.org/library/380
 
 File :
-PicoCtf/Cryptography/flagelemts/substitution1/message.txt
+PicoCtf/Cryptography/Medium/files/substitution0/message.txt
 
 
 Soln : 

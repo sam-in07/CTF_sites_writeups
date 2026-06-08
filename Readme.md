@@ -32,6 +32,7 @@ ToOLS :
 CRYPTO : 
 
 **
+https://www.boxentriq.com/ciphers/keyed-caesar-cipher 
 https://www.dcode.fr/vigenere-cipher  
 https://www.guballa.de/vigenere-solver 
 https://www.boxentriq.com/ciphers/one-time-pad  
