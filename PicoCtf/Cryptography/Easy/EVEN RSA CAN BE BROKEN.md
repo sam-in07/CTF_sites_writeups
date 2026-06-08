@@ -2,7 +2,7 @@ Problem : https://learn.cylabacademy.org/library/470
 
 This service provides you an encrypted flag. Can you decrypt it with just N & e?  
 he program's source code can be downloaded here
-. PicoCtf/Cryptography/flagelemts/EVEN RSA CAN BE BROKEN???   
+. PicoCtf/Cryptography/flagelemts/EVEN RSA CAN BE BROKEN
 
 Soln :  
 
