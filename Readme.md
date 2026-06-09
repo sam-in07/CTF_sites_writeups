@@ -31,7 +31,13 @@ ToOLS :
 
 CRYPTO : 
 
+https://www.101computing.net/visual-cryptography/
+
 **
+
+https://www.dcode.fr/cipher-identifier
+
+https://www.cryptool.org/en/cto/
 https://www.boxentriq.com/ciphers/keyed-caesar-cipher 
 https://www.dcode.fr/vigenere-cipher  
 https://www.guballa.de/vigenere-solver 
@@ -111,5 +117,9 @@ Tools :
 https://www.kali.org/tools/rizin-cutter/ 
 
 
+
+Osint : 
+
+https://what3words.com/bullion.rocked.devotion
 
 

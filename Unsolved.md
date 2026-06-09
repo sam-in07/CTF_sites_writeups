@@ -14,4 +14,9 @@ Cypto :
 PicoCtf/Cryptography/Medium/substitution2.md
 PicoCtf/Cryptography/Medium/Easy Peasy.md
 
+PicoCtf/Cryptography/Medium/Pixelated,md
+
+PicoCtf/Cryptography/Medium/No Padding, No Problem.md
+
+
 
