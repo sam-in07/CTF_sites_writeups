@@ -14,6 +14,8 @@ cutter "/home/samin/Documents/Tryhackme/pwn101-1644307211706.pwn101"
 Resouces :
 https://cryptocat.me/resources 
 https://ctf-wiki.mahaloz.re/introduction/mode/ 
+https://overthewire.org/wargames/
+https://github.com/EkRafz/OverTheWire---Walkthroughs
 
 
 
@@ -121,6 +123,9 @@ https://www.kali.org/tools/rizin-cutter/
 
 
 Osint : 
+
+https://ctf.osint.industries/login?next=%2Fchallenges%3F#Found%20the%20HACKER-24
+========
 
 https://what3words.com/bullion.rocked.devotion
 
