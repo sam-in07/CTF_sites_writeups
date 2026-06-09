@@ -97,6 +97,8 @@ TOOLS
 alt of burp 
 https://www.kali.org/tools/zaproxy/ 
 
+https://thanhle.io.vn/de4js/
+
 
 
 Reverse eng :
