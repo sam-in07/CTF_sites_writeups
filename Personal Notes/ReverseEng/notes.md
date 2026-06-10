@@ -11,4 +11,4 @@ add execute permission :
 └─$ ./crackme1       
 flag{not_that_kind_of_elf}
 
-                                                                    
+http://unixwiz.net/techtips/x86-jumps.html 

@@ -130,3 +130,24 @@ https://ctf.osint.industries/login?next=%2Fchallenges%3F#Found%20the%20HACKER-24
 https://what3words.com/bullion.rocked.devotion
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=================>
+
+
+If it is missing, you can easily install or verify it using the default package manager.
+https://share.google/aimode/7qA9vtK5JowazcnpZ
