@@ -15,6 +15,11 @@ just for gdb :
 
 with pwngdb ~ gdb debugger0_b  
 
+gdb-peda$  
+gdb -nx -ex "source /usr/share/gdb-peda/peda.py" ./vuln 
+
+
+
 
 
 
