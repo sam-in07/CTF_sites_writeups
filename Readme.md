@@ -9,6 +9,13 @@ cutter cmd :
 
 cutter "/home/samin/Documents/Tryhackme/pwn101-1644307211706.pwn101"  
 
+just for gdb :
+┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
+└─$ gdb -nx ./debugger0_b
+
+with pwngdb ~ gdb debugger0_b  
+
+
 
 
 Resouces :
@@ -106,7 +113,7 @@ https://thanhle.io.vn/de4js/
 Reverse eng :
 
 https://github.com/0xMr-Robot/CTF-Reverse-Engineering-Bootcamp
-
+https://ftp.gnu.org/old-gnu/Manuals/gdb/html_node/gdb_55.html
 
 
 
