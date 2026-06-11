@@ -41,3 +41,7 @@ steghide --help
    -p <passphrase>       use <passphrase> to extract data
  -xf, --extractfile      select file name for extracted data
    -xf <filename>        write the extracted data to <filename>
+
+pdftotext 2ndpart.pdf   
+
+unzip x.zip
