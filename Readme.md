@@ -147,6 +147,19 @@ https://what3words.com/bullion.rocked.devotion
 
 
 
+Forensics : 
+
+https://github.com/abeluck/stegdetect
+https://github.com/0xRick/0xRick.github.io/blob/master/lists/stego/index.html
+https://29a.ch/photo-forensics/#strings
+
+https://wiki.sleuthkit.org/TSK-Tool-Overview/
+
+
+
+
+
+
 
 
 
