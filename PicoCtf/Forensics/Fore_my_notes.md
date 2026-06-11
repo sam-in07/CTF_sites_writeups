@@ -45,3 +45,15 @@ steghide --help
 pdftotext 2ndpart.pdf   
 
 unzip x.zip
+
+┌──(samin㉿kali)-[~/…/Forensics/EASY/files/disko1]
+└─$ gunzip disko-1.dd.gz
+                                                                                                                  
+┌──(samin㉿kali)-[~/…/Forensics/EASY/files/disko1]
+└─$ ls 
+disko-1.dd
+                                                                                                                  
+┌──(samin㉿kali)-[~/…/Forensics/EASY/files/disko1]
+└─$ srch_strings disko-1.dd | grep picoCTF  
+
+best for (.pdf) related =>  https://medium.com/@saumya.sriv27/riddle-registry-a-simple-picoctf-walkthrough-e221cc5cf54a
