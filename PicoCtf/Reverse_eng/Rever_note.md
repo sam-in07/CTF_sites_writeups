@@ -51,3 +51,7 @@ Reverse Engineering (Rev) is the process of analyzing a compiled binary to under
 
 
 Reverse Engineering (Rev)The Goal: Disassemble or decompile compiled machine code back into readable logic (like pseudocode) to figure out exactly what the program expects.Key Tasks: Figuring out custom encryption algorithms, reconstructing data structures, and bypassing DRM or license checks.The "Flag": Usually found by reversing the logic to determine the correct password/input or decrypting a stored secret.Common Tools: Ghidra, IDA Pro, Binary Ninja.Skills Needed: Deep knowledge of assembly (x86/x64/ARM), C/C++ data types, and debugging.
+
+
+
+Rule : read the code understand what want then step into next Happy flag!!!!!!!1
