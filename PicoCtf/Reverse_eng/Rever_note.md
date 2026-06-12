@@ -34,8 +34,17 @@ strings -t x XX.class | grep picoCTF
 
 
 
+$ chmod +x gdbme
+$ gdb gdbme
+(gdb) layout asm
+(gdb) break *(main+99)
+(gdb) run
+(gdb) jump *(main+104)
 
 
+
+
+https://gchq.github.io/CyberChef/#recipe=From_Charcode('Space',10)
 
 
 
