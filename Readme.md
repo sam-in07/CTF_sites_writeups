@@ -172,3 +172,6 @@ https://wiki.sleuthkit.org/TSK-Tool-Overview/
 
 If it is missing, you can easily install or verify it using the default package manager.
 https://share.google/aimode/7qA9vtK5JowazcnpZ
+
+
+[ReverseVsBinary](https://youtu.be/mCrSr9tAehI?si=T679uAoqZKLtxpzc)
