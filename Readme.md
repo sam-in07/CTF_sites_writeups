@@ -13,10 +13,6 @@ just for gdb :
 ┌──(samin㉿kali)-[~/…/PicoCtf/Reverse_eng/Medium/Files]
 └─$ gdb -nx ./debugger0_b
 
-with pwngdb ~ gdb debugger0_b  
-
-gdb-peda$  
-gdb -nx -ex "source /usr/share/gdb-peda/peda.py" ./vuln 
 
 
 
