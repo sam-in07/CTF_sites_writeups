@@ -12,3 +12,55 @@ ciphertext (c): 2205316413931134031074603746928247799030155221252519872649658699
 Soln : 
 
 
+"MiniRSA" typically refers to RSA cryptography puzzles or academic exercises that utilize a small public exponent (e.g., e = 3) or a small modulus size. Because these implementations lack standard padding, they are highly vulnerable to mathematical shortcuts like cube-root or broadcast attacks.
+
+https://share.google/aimode/eCU4ozhi6oNEArSpF 
+https://github.com/HHousen/PicoCTF-2021/blob/master/Cryptography/Mini%20RSA/README.md
+
+
+
+
+
+```python
+
+from decimal import *
+from tqdm import tqdm
+
+N = Decimal(29331922499794985782735976045591164936683059380558950386560160105740343201513369939006307531165922708949619162698623675349030430859547825708994708321803705309459438099340427770580064400911431856656901982789948285309956111848686906152664473350940486507451771223435835260168971210087470894448460745593956840586530527915802541450092946574694809584880896601317519794442862977471129319781313161842056501715040555964011899589002863730868679527184420789010551475067862907739054966183120621407246398518098981106431219207697870293412176440482900183550467375190239898455201170831410460483829448603477361305838743852756938687673)
+e = Decimal(3)
+c = Decimal(2205316413931134031074603746928247799030155221252519872649658699087287913260193601796338588563690030236823870477837180638915060721061188487481048553164658381803738810902190423646688126287145523965280328931010367537704570385816913306112101)
+
+
+def int_to_ascii(m):
+    # Decode to ascii (from https://crypto.stackexchange.com/a/80346)
+    m_hex = hex(int(m))[2:-1]  # Number to hex
+    m_ascii = "".join(
+        chr(int(m_hex[i : i + 2], 16)) for i in range(0, len(m_hex), 2)
+    )  # Hex to Ascii
+    return m_ascii
+
+
+# Find padding
+getcontext().prec = 280  # Increase precision
+padding = 0
+for k in tqdm(range(0, 10_000)):
+    m = pow(k * N + c, 1 / e)
+
+    m_ascii = int_to_ascii(m)
+
+    if "pico" in m_ascii:
+        padding = k
+        break
+
+print("Padding: %s" % padding)
+
+# Increase precision further to get entire flag
+getcontext().prec = 700
+
+m = pow(padding * N + c, 1 / e)
+m_ascii = int_to_ascii(m)
+print("Flag: %s" % m_ascii.strip())
+```
+
+
+picoCTF{n33d_a_lArg3r_e_7380c7c9}

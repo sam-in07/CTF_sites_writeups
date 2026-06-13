@@ -20,5 +20,8 @@ PicoCtf/Cryptography/Medium/Pixelated,md
 
 PicoCtf/Cryptography/Medium/No Padding, No Problem.md
 
+Crypto :
 
+
+PicoCtf/Cryptography/Medium/Easy Peasy.md
 
