@@ -63,7 +63,8 @@ TOOLS :
 https://www.tunnelsup.com/getting-started-cracking-password-hashes/
 https://md5hashing.net/hash/sha1/06f8aa28b9237866e3e289f18ade19e1736d809d
 https://www.dcode.fr/cipher-identifier
-
+https://www.boxentriq.com/ciphers/playfair-cipher
+https://rumkin.com/tools/cipher/playfair/
 https://www.cryptool.org/en/cto/
 https://www.boxentriq.com/ciphers/keyed-caesar-cipher 
 https://www.dcode.fr/vigenere-cipher  
