@@ -115,3 +115,169 @@ undefined8 check(char *param_1)
     local_2c = 0;
 
      "\xe1\xa7\x1e\xf8\x75\x23\x7b\x61\xb9\x9d\xfc\x5a\x5b\xdf\x69\xd2\xfe\x1b\xed\xf4\xed\x67\xf4", 
+
+
+
+
+```python
+secret = bytes([
+    0xe1, 0xa7, 0x1e, 0xf8, 0x75, 0x23, 0x7b, 0x61,
+    0xb9, 0x9d, 0xfc, 0x5a, 0x5b, 0xdf, 0x69, 0xd2,
+    0xfe, 0x1b, 0xed, 0xf4, 0xed, 0x67, 0xf4
+])
+
+# Convert to a bit string
+bitstream = ''.join(f'{b:08b}' for b in secret)
+
+# Split into 7-bit chunks 
+chunks = [bitstream[i:i+7] for i in range(0, len(bitstream), 7)]
+
+# Convert each chunk into ASCII
+password = ''.join(chr(int(c, 2)) for c in chunks)
+
+print("Recovered password:", password)
+print("Length:", len(password))
+```
+
+Recovered password: picoCTF{0n3_bi7_4t_a_7im3}
+Length: 27
+
+
+
+
+
+
+
+
+This code is taking a sequence of raw bytes, turning them into a continuous stream of bits, splitting that stream into 7-bit pieces, and then interpreting each 7-bit piece as an ASCII character to reconstruct a “password.”
+
+Here’s what each part is doing step by step:
+
+---
+
+### 1. Raw byte data
+
+```python
+secret = bytes([
+    0xe1, 0xa7, 0x1e, 0xf8, 0x75, 0x23, 0x7b, 0x61,
+    0xb9, 0x9d, 0xfc, 0x5a, 0x5b, 0xdf, 0x69, 0xd2,
+    0xfe, 0x1b, 0xed, 0xf4, 0xed, 0x67, 0xf4
+])
+```
+
+This is a byte array (23 bytes total). Each value is an 8-bit number (0–255).
+
+---
+
+### 2. Convert bytes to a bit string
+
+```python
+bitstream = ''.join(f'{b:08b}' for b in secret)
+```
+
+Each byte is converted into its 8-bit binary representation.
+
+Example:
+
+* `0xe1` → `11100001`
+* `0xa7` → `10100111`
+
+Then all of them are concatenated into one long string of bits.
+
+So instead of 23 separate bytes, you now have:
+
+```
+23 × 8 = 184 bits total
+```
+
+---
+
+### 3. Split into 7-bit chunks
+
+```python
+chunks = [bitstream[i:i+7] for i in range(0, len(bitstream), 7)]
+```
+
+Now the 184-bit stream is cut into chunks of 7 bits each.
+
+Important note:
+
+* ASCII traditionally uses **7-bit encoding**, so this is trying to interpret the data as 7-bit ASCII characters.
+
+However:
+
+* 184 ÷ 7 = 26 full chunks with 2 leftover bits (incomplete chunk at the end)
+
+So the last chunk may be shorter or invalid.
+
+---
+
+### 4. Convert each 7-bit chunk to a character
+
+```python
+password = ''.join(chr(int(c, 2)) for c in chunks)
+```
+
+For each chunk:
+
+1. Convert binary string → integer (`int(c, 2)`)
+2. Convert integer → ASCII character (`chr(...)`)
+3. Join everything into a final string
+
+So something like:
+
+```
+"1000001" → 65 → 'A'
+```
+
+---
+
+### 5. Output
+
+```python
+print("Recovered password:", password)
+print("Length:", len(password))
+```
+
+This prints:
+
+* The decoded string (“password”)
+* Its length (number of 7-bit characters produced)
+
+---
+
+## ⚠️ Key idea behind this code
+
+This is a **bit-level decoding trick**, often seen in:
+
+* CTF (capture-the-flag) challenges
+* Steganography
+* custom encodings
+
+It assumes:
+
+> “The original message was packed into 7-bit ASCII, then stored as 8-bit bytes.”
+
+---
+
+## ⚠️ Potential issue in this code
+
+Because:
+
+* 184 bits is not divisible by 7
+
+You may get:
+
+* a final incomplete chunk
+* garbage character at the end
+* or decoding error depending on input handling
+
+---
+
+## In one sentence
+
+This code takes encrypted-looking bytes, converts them into a binary stream, splits them into 7-bit ASCII units, and reconstructs a hidden text string from those bits.
+
+---
+
+If you want, I can also decode this exact byte sequence and show you what the output actually becomes.
