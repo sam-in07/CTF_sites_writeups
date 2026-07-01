@@ -10,3 +10,6 @@ Suggested order to play the games in
     Utumno - binary exploitation (and reverse engineering)
     Maze - binary exploitation (and reverse engineering)
     …
+
+
+ssh -p 2223 leviathanN@leviathan.labs.overthewire.org    (N= 1 2 3 ...)
