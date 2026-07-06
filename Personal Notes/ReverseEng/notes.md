@@ -13,7 +13,7 @@ flag{not_that_kind_of_elf}
 
 http://unixwiz.net/techtips/x86-jumps.html 
 
-
+objdump -d Heap_devil > disasm.txt  diye ghira ar open kora lagbe na 
 ========================================================
 
     Download the artifact from the next challenge.
