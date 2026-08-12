@@ -120,7 +120,8 @@ __cxa_finalize@@GLIBC_2.2.5
 .data
 .bss
 .comment
-hacker@reverse-engineering~terrible-token-easy:~$ /challenge/terrible-token-easy
+
+## hacker@reverse-engineering~terrible-token-easy:~$ /challenge/terrible-token-easy
 ###
 ### Welcome to /challenge/terrible-token-easy!
 ###
@@ -150,7 +151,7 @@ Expected result:
 Checking the received license key!
 
 Wrong! No flag for you!
-hacker@reverse-engineering~terrible-token-easy:~$ ltrace /challenge/terrible-token-easy
+## hacker@reverse-engineering~terrible-token-easy:~$ ltrace /challenge/terrible-token-easy
 setvbuf(0x7d90b56a5980, nil, 2, 0)                                                              = 0
 setvbuf(0x7d90b56a66a0, nil, 2, 0)                                                              = 0
 puts("###"###
