@@ -1,4 +1,6 @@
-hacker@reverse-engineering~terrible-token-easy:~$ strings /challenge/terrible-token-easy
+## hacker@reverse-engineering~terrible-token-easy:~$ strings /challenge/terrible-token-easy
+
+```json
 /lib64/ld-linux-x86-64.so.2
 mgUa
 libc.so.6
@@ -120,8 +122,12 @@ __cxa_finalize@@GLIBC_2.2.5
 .data
 .bss
 .comment
+```
+
 
 ## hacker@reverse-engineering~terrible-token-easy:~$ /challenge/terrible-token-easy
+```json
+
 ###
 ### Welcome to /challenge/terrible-token-easy!
 ###
@@ -151,7 +157,10 @@ Expected result:
 Checking the received license key!
 
 Wrong! No flag for you!
+```
 ## hacker@reverse-engineering~terrible-token-easy:~$ ltrace /challenge/terrible-token-easy
+```json
+
 setvbuf(0x7d90b56a5980, nil, 2, 0)                                                              = 0
 setvbuf(0x7d90b56a66a0, nil, 2, 0)                                                              = 0
 puts("###"###
@@ -223,7 +232,11 @@ puts("Wrong! No flag for you!"Wrong! No flag for you!
 )                                                                 = 24
 exit(1 <no return ...>
 +++ exited (status 1) +++
-hacker@reverse-engineering~terrible-token-easy:~$ /challenge/terrible-token-easy
+```
+
+## hacker@reverse-engineering~terrible-token-easy:~$ /challenge/terrible-token-easy
+```json
+
 ###
 ### Welcome to /challenge/terrible-token-easy!
 ###
@@ -253,7 +266,10 @@ Expected result:
 Checking the received license key!
 
 Wrong! No flag for you!
-hacker@reverse-engineering~terrible-token-easy:~$ printf 'yxfuc' | /challenge/terrible-token-easy
+```
+## hacker@reverse-engineering~terrible-token-easy:~$ printf 'yxfuc' | /challenge/terrible-token-easy
+```json
+
 ###
 ### Welcome to /challenge/terrible-token-easy!
 ###
@@ -285,7 +301,10 @@ You win! Here is your flag:
 pwn.college{4TgdDujNwY2Yn7DaLvzA1sOvdDp.dFTNywSM2QDN4EzW}
 
 
-You’ve already reverse-engineered the important part. The key is **`yxfuc`**.
+```
+
+
+## You’ve already reverse-engineered the important part. The key is **`yxfuc`**.
 
 Why:
 

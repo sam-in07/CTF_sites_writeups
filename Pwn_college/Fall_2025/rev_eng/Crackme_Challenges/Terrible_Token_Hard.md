@@ -1,13 +1,3 @@
-┌──(samin㉿kali)-[~]
-└─$ssh -i key hacker@dojo.pwn.college.
-The authenticity of host 'dojo.pwn.college. (206.206.192.59)' can't be established.
-ED25519 key fingerprint is: SHA256:B31DzslH7ThPQFDntu6WpMf0q+YmRG4i6qamH/zkz1A
-This host key is known by the following other names/addresses:
-    ~/.ssh/known_hosts:7: [hashed name]
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added 'dojo.pwn.college.' (ED25519) to the list of known hosts.
-Connected!   
-
 ## hacker@reverse-engineering~terrible-token-hard:~$ strings /challenge/terrible-token-hard
 
 /lib64/ld-linux-x86-64.so.2
@@ -73,6 +63,7 @@ GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
 
 
 ## hacker@reverse-engineering~terrible-token-hard:~$ ltrace /challenge/terrible-token-hard 
+```json
 
 setvbuf(0x714266df0980, nil, 2, 0)                                                     = 0
 setvbuf(0x714266df16a0, nil, 2, 0)                                                     = 0
@@ -106,9 +97,11 @@ puts("Wrong! No flag for you!"Wrong! No flag for you!
 )                                                        = 24
 exit(1 <no return ...>
 +++ exited (status 1) +++
+```
 
 
 ## hacker@reverse-engineering~terrible-token-hard:~$ gdb -q /challenge/terrible-token-hard
+```json
 Reading symbols from /challenge/terrible-token-hard...
 (No debugging symbols found in /challenge/terrible-token-hard)
 (gdb) break memcmp
@@ -139,6 +132,8 @@ Undefined command: "ccccccccccccccccc".  Try "help".
 (gdb) x/5bx $rsi
 0x5e1c520d7010: 0x69    0x79    0x6a    0x77    0x74
 (gdb) quit 
+```
+
 
 ``
 I found the expected 5 bytes:
@@ -179,7 +174,7 @@ That should give you the flag.
 
 
 
-## hacker@reverse-engineering~terrible-token-hard:~$ printf 'iyjwt' | /challenge/terrible-token-hard
+hacker@reverse-engineering~terrible-token-hard:~$ printf 'iyjwt' | /challenge/terrible-token-hard
 
 
 ###
