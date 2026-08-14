@@ -1,103 +1,222 @@
-## hacker@reverse-engineering~terrible-token-hard:~$ strings /challenge/terrible-token-hard
+# Terrible Token Hard — Reverse Engineering Walkthrough
 
-/lib64/ld-linux-x86-64.so.2
-mgUa
-libc.so.6
-exit
-puts
-putchar
-stdin
-printf
-__errno_location
-read
-memcmp
-stdout
-geteuid
-open
-__cxa_finalize
-setvbuf
-strerror
-__libc_start_main
-write
-GLIBC_2.2.5
-_ITM_deregisterTMCloneTable
-__gmon_start__
-_ITM_registerTMCloneTable
-u+UH
-[]A\A]A^A_
-You win! Here is your flag:
-/flag
-  ERROR: Failed to open the flag -- %s!
-  Your effective user id is not 0!
-  You must directly run the suid binary in order to have the correct permissions!
-  ERROR: Failed to read the flag -- %s!
-### Welcome to %s!
-This license verifier software will allow you to read the flag. However, before you can do so, you must verify that you
-are licensed to read flag files! This program consumes a license key over stdin. Each program may perform entirely
-different operations on that input! You must figure out (by reverse engineering this program) what that license key is.
-Providing the correct license key will net you the flag!
-Ready to receive your license key!
+## Challenge
+
+Binary:
+
+```bash
+/challenge/terrible-token-hard
+```
+
+The goal is to reverse engineer the license verification logic and determine the correct 5-byte license key.
+
+---
+
+## 1. Initial Investigation with `strings`
+
+Run:
+
+```bash
+strings /challenge/terrible-token-hard
+```
+
+Among the output, there is a notable 5-character printable string:
+
+```text
+iyjwt
+```
+
+The binary also contains the normal license-verifier strings:
+
+```text
 Checking the received license key!
 Wrong! No flag for you!
-:*3$"
-iyjwt
-GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
-.shstrtab
-.interp
-.note.gnu.property
-.note.gnu.build-id
-.note.ABI-tag
-.gnu.hash
-.dynsym
-.dynstr
-.gnu.version
-.gnu.version_r
-.rela.dyn
-.rela.plt
-.init
-.plt.got
-.plt.sec
-.text
-.fini
-
-
-
-## hacker@reverse-engineering~terrible-token-hard:~$ ltrace /challenge/terrible-token-hard 
-```json
-
-setvbuf(0x714266df0980, nil, 2, 0)                                                     = 0
-setvbuf(0x714266df16a0, nil, 2, 0)                                                     = 0
-puts("###"###
-)                                                                            = 4
-printf("### Welcome to %s!\n", "/challenge/terrible-token-hard"### Welcome to /challenge/terrible-token-hard!
-)                       = 47
-puts("###"###
-)                                                                            = 4
-putchar(10, 0x714266df1723, 0, 0x714266d12297
-)                                         = 10
-puts("This license verifier software w"...This license verifier software will allow you to read the flag. However, before you can do so, you must verify that you
-)                                            = 120
-puts("are licensed to read flag files!"...are licensed to read flag files! This program consumes a license key over stdin. Each program may perform entirely
-)                                            = 115
-puts("different operations on that inp"...different operations on that input! You must figure out (by reverse engineering this program) what that license key is.
-)                                            = 120
-puts("Providing the correct license ke"...Providing the correct license key will net you the flag!
-
-)                                            = 58
-puts("Ready to receive your license ke"...Ready to receive your license key!
-
-)                                            = 36
-read(0
-, "\n", 5)                                                                       = 1
-puts("Checking the received license ke"...Checking the received license key!
-
-)                                            = 36
-memcmp(0x7ffc1593a342, 0x5f90fc778010, 5, 0x714266d12297)                              = 0xffffffa1
-puts("Wrong! No flag for you!"Wrong! No flag for you!
-)                                                        = 24
-exit(1 <no return ...>
-+++ exited (status 1) +++
+You win! Here is your flag:
+/flag
 ```
+
+The `iyjwt` string is therefore a strong candidate for the expected license value.
+
+---
+
+## 2. Inspecting the Program with `ltrace`
+
+Run:
+
+```bash
+ltrace /challenge/terrible-token-hard
+```
+
+The important part of the output is:
+
+```text
+read(0, "\n", 5) = 1
+...
+puts("Checking the received license ke"...Checking the received license key!)
+...
+memcmp(0x7ffc1593a342, 0x5f90fc778010, 5, ...) = 0xffffffa1
+...
+puts("Wrong! No flag for you!"Wrong! No flag for you!)
+```
+
+This tells us:
+
+* The program reads at most **5 bytes** from standard input.
+* The program checks the license using `memcmp()`.
+* `memcmp()` compares exactly **5 bytes**.
+* There is no visible mangling step between reading the input and the comparison.
+
+---
+
+## 3. No Mangling Operation
+
+This challenge differs from `tangled-ticket-easy` and `tangled-ticket-hard`.
+
+Those challenges explicitly described transformations such as:
+
+```text
+swap indexes 1 and 4
+```
+
+or required inspecting transformed buffers.
+
+Here, the program goes directly from:
+
+```text
+Ready to receive your license key!
+```
+
+to:
+
+```text
+Checking the received license key!
+```
+
+and then:
+
+```text
+memcmp(..., ..., 5)
+```
+
+There is no message indicating a swap, XOR, reversal, or other transformation.
+
+Therefore, the 5-byte printable value embedded in the binary can be used directly as the license key.
+
+---
+
+## 4. Determining the License
+
+The candidate value found with `strings` is:
+
+```text
+iyjwt
+```
+
+It contains exactly five characters:
+
+```text
+i y j w t
+```
+
+This matches the 5-byte length used by:
+
+```text
+memcmp(..., ..., 5)
+```
+
+Therefore:
+
+```text
+Expected license:
+iyjwt
+```
+
+---
+
+## 5. Verification
+
+Test the candidate with:
+
+```bash
+printf 'iyjwt' | /challenge/terrible-token-hard
+```
+
+Alternatively:
+
+```bash
+echo 'iyjwt' | /challenge/terrible-token-hard
+```
+
+The important point is that the input is exactly five characters:
+
+```text
+i y j w t
+```
+
+which matches the expected 5-byte comparison.
+
+---
+
+## 6. Why `strings` Is Enough Here
+
+The binary exposes the expected token as a printable string:
+
+```text
+iyjwt
+```
+
+Unlike a challenge where the expected value is encoded or transformed, there is no additional mangling logic indicated by the program output.
+
+The `ltrace` result confirms the comparison length:
+
+```text
+memcmp(..., ..., 5)
+```
+
+So the evidence lines up:
+
+```text
+strings:
+iyjwt
+   ↓
+5 characters
+
+ltrace:
+memcmp(..., ..., 5)
+   ↓
+5-byte comparison
+
+No mangling:
+   ↓
+use the value directly
+```
+
+---
+
+## 7. Final Solution
+
+The correct license key is:
+
+```text
+iyjwt
+```
+
+Verification command:
+
+```bash
+printf 'iyjwt' | /challenge/terrible-token-hard
+```
+
+### Summary
+
+| Observation          | Result                           |
+| -------------------- | -------------------------------- |
+| Binary               | `/challenge/terrible-token-hard` |
+| Input size           | 5 bytes                          |
+| Comparison           | `memcmp(..., ..., 5)`            |
+| Mangling             | None observed                    |
+| Token from `strings` | `iyjwt`                          |
+| License key          | **`iyjwt`**                      |
 
 
 ## hacker@reverse-engineering~terrible-token-hard:~$ gdb -q /challenge/terrible-token-hard
