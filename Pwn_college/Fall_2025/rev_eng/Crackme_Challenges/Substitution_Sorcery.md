@@ -1,5 +1,3 @@
-
-````markdown
 # Substitution Sorcery — Reverse Engineering Write-up
 
 ## Challenge
@@ -12,7 +10,6 @@ Binary:
 
 The goal is to reverse engineer the key verification logic, recover the required 16-byte binary key, and obtain the flag.
 
----
 
 ## 1. Initial Investigation with `ltrace`
 
