@@ -725,4 +725,46 @@ pwn.college{Y1zDOA3xYM92uvVejAfEeu_vwBb.dVjNywSM2QDN4EzW}
 
 
 
+```python
+
+python3 -c '
+import sys
+
+x = bytes.fromhex("""
+0a fa 87 41 2f 7b 21 1a e5 8b 43 40 68 3b 08 e6
+86 47 4c 69 25 17 e0 81 55 41 69 3c 1e fc 81 1d
+45 68 40 4e ef
+""")
+x = bytearray(x)
+
+# Inverse of final reverse
+x.reverse()
+
+# Inverse of swap(1,5)
+x[1], x[5] = x[5], x[1]
+
+# Inverse of swap(2,32)
+x[2], x[32] = x[32], x[2]
+
+# Inverse of the reverse before those swaps
+x.reverse()
+
+# XOR is its own inverse; key is applied MSB-first
+key = bytes.fromhex("79 97 e4 25 24 1f 4a")
+for i in range(len(x)):
+    x[i] ^= key[i % len(key)]
+
+# Inverse of swap(22,35)
+x[22], x[35] = x[35], x[22]
+
+# Inverse of initial reverse
+x.reverse()
+
+sys.stdout.buffer.write(x)
+' | /challenge/monstrous-mangler-easy
+```
+
+
+
+
 <img src="images/MMaE.png" alt="Description" style="width:200%;">
